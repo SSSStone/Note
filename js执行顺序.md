@@ -20,26 +20,28 @@ var Fn2 = function(){
 例子：
 1. “定义式”函数定义
 
-	``` javascript
-	Fn1(); 
-	function Fn1(){ 
-		alert("Hello World!"); 
-	} 
-	```
+``` javascript
+Fn1(); 
+function Fn1(){ 
+	alert("Hello World!"); 
+} 
+```
 正常执行，弹出“Hello World!”，浏览器对Fn1进行了预处理，再从Fn1();开始执行。
-****************
+
 2. “赋值式”函数定义
 
-	``` javascript
-	Fn2(); 
-	var Fn2 = function(){ 
-		alert("Hello wild!"); 
-	} 
-	```
+``` javascript
+Fn2(); 
+var Fn2 = function(){ 
+	alert("Hello wild!"); 
+} 
+```
 Firebug报错：Fn2 is not a function，浏览器未对Fn2进行预处理，依序执行，所以报错Fn2未定义。
+
 ##二、代码块及js文件的处理
 “代码块”是指一对<script type=”text/javascript”></script>标签包裹着的js代码，文件就是指js文件。
 浏览器对每个块或文件进行独立的扫描，然后对全局的代码进行顺序执行。
+
 - 在一个块(文件)中，函数可以在调用之后进行“定义式”定义。
 - 在两个块中，定义函数所在的块必须在函数被调用的块之前。 
 
