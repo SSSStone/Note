@@ -1,5 +1,6 @@
 #centos找回MySQL密码
 1. 停止mysqld服务
+
 `/etc/init.d/mysqld stop`
 2. 以不检查权限的方式启动
 `cd /usr/local/mysql/bin`
