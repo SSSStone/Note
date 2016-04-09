@@ -1,14 +1,14 @@
+#CSS书写规范
 ##CSS书写顺序
-　　1. 位置属性(position, top, right, z-index, display, float等)
-　　2. 大小(width, height, padding, margin)
-　　3.文字系列(font, line-height, letter-spacing, color- text-align等)
-　　4.背景(background, border等)
-　　5.其他(animation, transition等)
+1. 位置属性(position, top, right, z-index, display, float等)
+2. 大小(width, height, padding, margin)
+3. 文字系列(font, line-height, letter-spacing, color- text-align等)
+4. 背景(background, border等)
+5. 其他(animation, transition等)
 ![1](1.jpg)
-##CSS书写规范
-###使用CSS缩写属性
+##使用CSS缩写属性
 　　CSS有些属性是可以缩写的，比如padding,margin,font等等，这样精简代码同时又能提高用户的阅读体验。
-
+![2](2.jpg)
 　　去掉小数点前的“0”
 
 　　简写命名
