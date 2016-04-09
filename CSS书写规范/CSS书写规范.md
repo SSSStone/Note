@@ -5,13 +5,19 @@
 3. 文字系列(font, line-height, letter-spacing, color- text-align等)
 4. 背景(background, border等)
 5. 其他(animation, transition等)
-![1](1.jpg)
-##使用CSS缩写属性
-　　CSS有些属性是可以缩写的，比如padding,margin,font等等，这样精简代码同时又能提高用户的阅读体验。
-![2](2.jpg)
-　　去掉小数点前的“0”
 
-　　简写命名
+![1](1.jpg)
+
+##使用CSS缩写属性
+1. CSS有些属性是可以缩写的，比如padding,margin,font等等，这样精简代码同时又能提高用户的阅读体验。
+
+![2](2.jpg)
+
+2. 去掉小数点前的“0”
+
+![2](2.jpg)
+
+3. 简写命名
 　　很多用户都喜欢简写类名，但前提是要让人看懂你的命名才能简写哦!
 
 　　16进制颜色代码缩写
