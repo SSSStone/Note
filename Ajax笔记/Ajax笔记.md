@@ -205,6 +205,7 @@ TEXT/XML/JSON
 		</body>
 		</html>
 		```
+
 ##四、readystate详解
 
 ###1、属性
