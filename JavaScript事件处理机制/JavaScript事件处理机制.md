@@ -70,7 +70,7 @@ W3C事件模型中明确地指出了事件转送的原理。事件传送可以�
 
 如果在JavaScript 中分配事件处理函数， 则需要首先获得要处理的对象的一引用，然后将函数赋值给对应的事件处理函数属性，请看一个简单的例子：
 
-```
+``` javascript
 var link=document.getElementById("mylink");
 link.onclick=function(){
 	alert("I was clicked !");
@@ -81,7 +81,7 @@ link.onclick=function(){
 
 如果在HTML中分配事件句柄的话，则直接通过HTML属性来设置事件处理函数就行了，并在其中包含合适的脚本作为特性值就可以了，例如：
 
-```
+``` javascript
 <a href="/" onclick="JavaScript code here">......</a>
 ```
 
@@ -105,7 +105,7 @@ IE提供的却是一种自有的，完全不同的甚至存在BUG的事件监听
 
 在IE中，每个元素和window对象都有两个方法：`attachEvent`方法和`detachEvent`方法。 
 
-```
+``` javascript
 element.attachEvent("onevent",eventListener);
 ```
 
@@ -114,7 +114,7 @@ element.attachEvent("onevent",eventListener);
 `attachEvent`方法允许外界注册该元素多个事件监听器。
 `attachEvent`接受两个参数。第一个参数是事件类型名，第二个参数`eventListener`是回调处理函数。这里得说明一下，有个经常会出错的地方，IE下利用attachEvent注册的处理函数调用时this指向不再是先前注册事件的元素，这时的this为window对象。还有一点是此方法的事件类型名称必须加上一个”on”的前缀（如onclick）。 
 
-```
+``` javascript
 element.attachEvent("onevent",eventListener);
 ```
 
@@ -124,7 +124,7 @@ element.attachEvent("onevent",eventListener);
 
 在支持W3C标准事件监听器的浏览器中，对每个支持事件的对象都可以使用`addEventListener`方法。该方法既支持注册冒泡型事件处理，又支持捕获型事件处理。所以与IE浏览器中注册元素事件监听器方式有所不同的。
 
-```
+``` javascript
 //标准语法 
 element.addEventListener('event', eventListener, useCapture);
 //默认
@@ -145,7 +145,7 @@ element.addEventListener('event', eventListener, false);
 我们现在已经知道，对于支持`addEventListener`方法的浏览器，只要需要事件监听器脚本就都需要调用`addEventListener`方法；而对于不支持该方法的IE浏览器，使用事件监听器时则需要调用`attachEvent`方法。要确保浏览器使用正确的方法其实并不困难，只需要通过一个`if-else`语句来检测当前浏览器中是否存在`addEventListener`方法或`attachEvent`方法即可。
 这样的方式就可以实现一个跨浏览器的注册与移除元素事件监听器方案:
  
-```
+``` javascript
 var EventUtil = {
 	//注册
 	addHandler: function(element, type, handler){
@@ -180,7 +180,7 @@ var EventUtil = {
 
 下面这段代码就为你解决了这个问题：
 
-```
+``` javascript
 var EventUtil ={
 	getEvent: function(event){
 		return event ? event : window.event;
@@ -203,7 +203,7 @@ var EventUtil ={
 
 在IE下 ，通过设置event对象的`cancelBubble`为`true`即可。
 
-```
+``` javascript
 function someHandle() {
 	window.event.cancelBubble = true;
 }
@@ -211,7 +211,7 @@ function someHandle() {
 
 DOM标准通过调用event对象的`stopPropagation()`方法即可。
 
-```
+``` javascript
 function someHandle(event) {
 	event.stopPropagation();
 }
@@ -219,7 +219,7 @@ function someHandle(event) {
 
 因些，跨浏览器的停止事件传递的方法是:
 
-```
+``` javascript
 function someHandle(event) {
 	event = event || window.event;
 	if(event.stopPropagation){
@@ -240,7 +240,7 @@ function someHandle(event) {
 
 在IE下,通过设置event对象的`returnValue`为`false`即可。
 
-```
+``` javascript
 function someHandle() {
 	window.event.returnValue = false;
 }
@@ -248,7 +248,7 @@ function someHandle() {
 
 DOM标准通过调用event对象的`preventDefault()`方法即可。
 
-```
+``` javascript
 function someHandle(event) {
 	event.preventDefault();
 }
@@ -256,7 +256,7 @@ function someHandle(event) {
 
 因些，跨浏览器的取消事件传递后的默认处理方法是：
 
-```
+``` javascript
 function someHandle(event) {
 	event = event || window.event;
 	if(event.preventDefault){
@@ -269,7 +269,7 @@ function someHandle(event) {
 
 ##完整的事件处理兼容性函数 
 
-```
+``` javascript
 var EventUtil = {
 	addHandler: function(element, type, handler){
 		if (element.addEventListener){
@@ -345,7 +345,7 @@ function globalClickListener(event) {
 
 最后结合下面HTML代码作分析:
 
-```
+``` javascript
 <body onclick="alert('current is body');">
 	<div id="div0" onclick="alert('current is '+this.id)">
 		<div id="div1" onclick="alert('current is '+this.id)">
@@ -359,7 +359,7 @@ function globalClickListener(event) {
 
 HTML运行后点击红色区域,这是最里层的DIV,根据上面说明,无论是DOM标准还是IE,直接写在html里的监听处理函数是事件冒泡传递时调用的,由最里层一直往上传递,所以会先后出现
 
-```
+``` javascript
 current is event_source
 current is div2
 current is div1
@@ -369,7 +369,7 @@ current is body
 
 添加以下片段:
 
-```
+``` javascript
 var div2 = document.getElementById('div2');
 EventUtil.addHandler(div2, 'click', function(event){
 	event = EventUtil.getEvent(event);
@@ -379,14 +379,14 @@ EventUtil.addHandler(div2, 'click', function(event){
 
 当点击红色区域后，根据上面说明，在泡冒泡处理期间，事件传递到div2后被停止传递了，所以div2上层的元素收不到通知，所以会先后出现:
 
-```
+``` javascript
 current is event_source
 current is div2
 ```
 
 在支持DOM标准的浏览器中,添加以下代码:
 
-```
+``` javascript
 document.body.addEventListener('click', function(event){
 	event.stopPropagation();
 }, true);
