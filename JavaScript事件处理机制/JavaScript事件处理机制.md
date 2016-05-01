@@ -324,7 +324,7 @@ var EventUtil = {
 
 例如你想作全局的点击事件监听，相对于document结点与document下所有的子结点，在某个条件下要求所有的子结点点击无效，这种情况下冒泡模型就解决不了了，而捕获型却非常适合，可以在最顶层结点添加捕获型事件监听器，伪码如下:
 
-```
+``` javascript
 function globalClickListener(event) {
 	if(canEventPass == false) {
 		//取消事件进一步向子结点传递和冒泡传递
