@@ -38,8 +38,7 @@ function createXHR(){
 
 分析HTTP协议，请求需要明确这样几个因素。
 
-1. 用什么方法来请求？
-    GER、POST、PUT、DELETE、HEAD
+1. 用什么方法来请求？GET、POST、PUT、DELETE、HEAD
 2. 请求哪个资源？（URL）
 3. 同步方式？（同步/异步）
 
