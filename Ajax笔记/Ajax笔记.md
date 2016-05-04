@@ -172,7 +172,7 @@ TEXT/XML/JSON
 2. JSONP的具体实现
 	1. 在jsonp.html页面定义一个函数，然后在远程remote.js中传入数据进行调用。
 	
-		```
+		``` javascript
 		//jsonp.html页面代码
 		<!DOCTYPE html>
 		<html>
