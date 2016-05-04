@@ -1,7 +1,9 @@
 #Ajax笔记
 [TOC]
 ##一、Ajax请求流程
+
 ###1/如何创建XHR对象
+
 按标准，` new XMLRequest() ` 即可得到。
 考虑低版本IE浏览器，可以` new window.ActiveXObject(Mircosoft.XMLHttp) `。新版本JQuery已经不支持IE6。
 
@@ -33,15 +35,21 @@ function createXHR(){
 ```
 
 ###2/如何利用XHR发送请求
+
 分析HTTP协议，请求需要明确这样几个因素。
 1. 用什么方法来请求？
-GER、POST、PUT、DELETE、HEAD
+    GER、POST、PUT、DELETE、HEAD
 2. 请求哪个资源？（URL）
 3. 同步方式？（同步/异步）
+
 ###3/如何获取请求返回的数据
+
 XHR对象本身又一个属性` responseText `代表返回值
+
 ###4/监听XHR状态
+
 XHR对象在请求与响应的过程中，状态会不断变化（0-4）。绑定一个函数，监听XHR状态变化。
+
 ``` javascript
 function testAjax(){
 	//1. 创建XHR
@@ -63,8 +71,11 @@ function testAjax(){
 	}
 }
 ```
+
 ##二、XHR详细探讨
+
 [XMLHttpRequest接口资料](https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest)
+
 ### 1/属性
 
 | 属性      |     说明 | 
@@ -90,6 +101,7 @@ function testAjax(){
 | abort()|   停止当前http请求。对应的XMLHttpRequest对象会复位到未初始化的状态。| 
 
 ###3/应用
+
 ![Alt text](./1458636819646.png 'name')
 
 ``` javascript
@@ -113,7 +125,9 @@ function testAjax(){
 	}
 }
 ```
+
 ###4/追加设置请求头信息
+
 有时需要设置请求头中的某些信息，eg：当发送数据不为空的时候，需要设置请求头的contentType属性为` "application/x-www-form-urlencoded; charset=UTF-8"`
 ``` javascript
 function testAjax(){
@@ -134,13 +148,19 @@ function testAjax(){
 	}
 }
 ```
+
 ###5/返回值类型
+
 TEXT/XML/JSON
+
 1. XML
 `this.responseXML.getElementByTagName('list')[0];`
+
 2. JSON
 `var object = eval('('+this.responseText+')');`
+
 ##三、JSONP(跨域访问)
+
 1. [JSONP简介](http://kb.cnblogs.com/page/139725/)
 	1. 一个众所周知的问题，Ajax直接请求普通文件存在跨域无权限访问的问题，甭管你是静态页面、动态网页、web服务、WCF，只要是跨域请求，一律不准；
 	2. 不过我们又发现，Web页面上调用js文件时则不受是否跨域的影响（不仅如此，我们还发现凡是拥有”src”这个属性的标签都拥有跨域的能力，比如 script、img、iframe）；
@@ -216,7 +236,9 @@ TEXT/XML/JSON
 | 2|   HEADERS_RECEIVED	|  send() has been called, and headers and status are available.|
 | 3|   LOADING	|  	Downloading; responseText holds partial data.|
 | 4|   DONE	|  The operation is complete.|
+
 ###2、详解
+
 1. UNSENT
 The XMLHttpRequest client has been created, but the open() method hasn't been called yet.
 1. OPENED
@@ -227,7 +249,9 @@ send() has been called and the response headers have been received.
 Response's body is being received. If responseType is "text" or empty string, responseText will have the partial text response as it loads.
 1. DONE
 The fetch operation is complete. This could mean that either the data transfer has been completed successfully or failed.
+
 ###3、实例测试
+
 ``` javascript
 var xhr = new XMLHttpRequest();
 console.log('UNSENT', xhr.readyState); // readyState will be 0
@@ -245,6 +269,8 @@ xhr.onload = function () {
 
 xhr.send(null);
 ```
+
 ##五、Ajax异步原理
+
 [javasript异步编程](https://github.com/SSSStone/Note/blob/master/Js%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B%E2%80%93%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0.md)
 
