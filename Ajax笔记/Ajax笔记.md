@@ -4,7 +4,7 @@
 
 ###1/如何创建XHR对象
 
-按标准，` new XMLRequest() ` 即可得到。
+按标准，` new XMLHttpRequest() ` 即可得到。
 考虑低版本IE浏览器，可以` new window.ActiveXObject(Mircosoft.XMLHttp) `。新版本JQuery已经不支持IE6。
 
 ``` javascript
@@ -37,6 +37,7 @@ function createXHR(){
 ###2/如何利用XHR发送请求
 
 分析HTTP协议，请求需要明确这样几个因素。
+
 1. 用什么方法来请求？
     GER、POST、PUT、DELETE、HEAD
 2. 请求哪个资源？（URL）
