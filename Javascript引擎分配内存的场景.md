@@ -1,6 +1,6 @@
 #Javascript引擎分配内存的场景
 
-1. Object：
+-. Object：
 
 ``` javascript
 new Object();
@@ -9,14 +9,14 @@ new MyConstructor();
 Object.create();
 ```
 
-2. 数组：
+-. 数组：
 
 ``` javascript
 new Array();
 [ 1, 2, 3, 4 ];
 ```
 
-3. 字符串：
+-. 字符串：
 
 ``` javascript
 new String(“hello”);
@@ -25,14 +25,14 @@ new String(“hello”);
 
 随带一说，javascript的字符串和.Net一样，使用资源池和copy on write方式管理字符串。
 
-4. 函数对象
+-. 函数对象
 
 ``` javascript
 var x = function () { ... }
 new Function(code);
 ```
 
-5. 闭包
+-. 闭包
 
 ``` javascript
 function outer(name) {
