@@ -49,6 +49,16 @@ items的属性介绍
 |kind	|一般为string或者file
 |type	|具体的数据类型，例如具体是哪种类型字符串或者哪种类型的文件，即MIME-Type
 
+chrome环境下两种属性测试结果
+
+|类型|kind|type|
+|:---|:--|:--|
+|复制的图片|string|text/html|
+|复制的图片|file|image/XX|
+|截图信息|file|image/XX|
+|文字信息|string|text/plain|
+|文字信息|string|text/html|
+
 items的方法介绍
 
 |方法	|参数	|说明|
@@ -123,3 +133,5 @@ function imgReader( item ){
     reader.readAsDataURL( file );
 };
 ```
+
+##
