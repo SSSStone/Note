@@ -34,9 +34,9 @@ Returns a structured clone of the notification’s data.
 `Notification.dir`
 The text direction of the notification as specified in the options parameter of the constructor.
 
-- auto: adopts the browser's language setting behaviour (the default.)
-- ltr: left to right.
-- rtl : right to left.
+- **auto**: adopts the browser's language setting behaviour (the default.)
+- **ltr**: left to right.
+- **rtl** : right to left.
 Note: Most browsers seem to ignore explicit ltr and rtl settings, and just go with the browser-wide setting.
 
 `Notification.lang`
@@ -81,6 +81,10 @@ These methods are available only on the Notification object itself.
 
 `Notification.requestPermission()`
 Requests permission from the user to display notifications.
+
+- **granted**: The user has explicitly granted permission for the current origin to display system notifications.
+- **denied**: The user has explicitly denied permission for the current origin to display system notifications.
+- **default**: The user decision is unknown; in this case the application will act as if permission was denied.
 
 ###Instance methods
 
