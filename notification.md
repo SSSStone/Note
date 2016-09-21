@@ -8,6 +8,12 @@
 `new Notification()`
 Creates a new instance of the Notification object.
 
+```
+Notification(title, options)
+//@param {String} title 要显示的通知标题
+//@param {Object} options 备选项参数，键值对
+```
+
 ##Properties
 
 `Notification.permission`
