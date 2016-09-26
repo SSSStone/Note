@@ -1,5 +1,6 @@
 #js获取浏览器类型和版本信息
 ```
+var system = explorer.substring(explorer.indexOf("(")+1,explorer.indexOf(")")).split(";")[0];
 function getExplorerInfo() {
 	var explorer = window.navigator.userAgent.toLowerCase() ;
 	//ie 
