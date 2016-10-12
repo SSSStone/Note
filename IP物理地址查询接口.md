@@ -97,6 +97,8 @@ $.getScript('http://pv.sohu.com/cityjson?ie=utf-8', function(){console.log(retur
 
 ##3.  百度IP地址查询接口：http://apis.baidu.com/apistore/iplookupservice/iplookup
 
+（暂时没测试）
+
 接口说明地址：http://apistore.baidu.com/apiworks/servicedetail/114.html
 
 - 需要key，很不方便
@@ -105,7 +107,7 @@ $.getScript('http://pv.sohu.com/cityjson?ie=utf-8', function(){console.log(retur
 
 |参数名|类型|必填|参数位置|描述|默认值|
 |--|--|--|--|--|--|
-|apikey|string|	是|	header	|API密钥|您自己的apikey|
+|apikey|string|是|header|API密钥|您自己的apikey|
 
 请求参数(urlParam) :
 
