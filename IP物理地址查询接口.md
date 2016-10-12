@@ -3,6 +3,7 @@
 
 提供国家、省、市、县、运营商全方位信息，信息维度广，格式规范
 提供完善的统计分析报表，省准确度超过99.8%，市准确度超过96.8%，数据质量有保障。
+不好用！！！
 
 - 请求接口（GET）：http://ip.taobao.com/service/getIpInfo.php?ip=[ip地址]
 - 返回数据格式：（json格式的）国家 、省（自治区或直辖市）、市（县）、运营商。例如：
@@ -84,28 +85,48 @@ function get_client_ip(){
 
 ##2、搜狐IP地址查询接口（默认编码GBK）：http://pv.sohu.com/cityjson?ie=utf-8
 
-##3.  百度IP地址查询接口： http://ip.taobao.com/service/getIpInfo.php?ip=[ip地址]
+```
+// 返回格式
+var returnCitySN = {"cip": "113.90.82.47", "cid": "440300", "cname": "广东省深圳市"};
 
-- 返回格式如下：
+// 使用方法
+$.getScript('http://pv.sohu.com/cityjson?ie=utf-8', function(){console.log(returnCitySN)})
+```
+
+
+
+##3.  百度IP地址查询接口：http://apis.baidu.com/apistore/iplookupservice/iplookup
+
+接口说明地址：http://apistore.baidu.com/apiworks/servicedetail/114.html
+
+- 需要key，很不方便
+
+请求参数(apikey) :
+
+|参数名|类型|必填|参数位置|描述|默认值|
+|--|--|--|--|--|--|
+|apikey|string|	是|	header	|API密钥|您自己的apikey|
+
+请求参数(urlParam) :
+
+|参数名|类型|必填|参数位置|描述|默认值|
+|--|--|--|--|--|--|
+|ip|string|是|urlParam|ip地址|127.0.0.1|
+
+返回格式如下：
 
 ```
 {
-	"code":0,
-	"data":{
-		"country":"\u4e2d\u56fd",
-		"country_id":"CN",
-		"area":"\u4e1c\u5317",
-		"area_id":"200000",
-		"region":"\u5409\u6797\u7701",
-		"region_id":"220000",
-		"city":"\u957f\u6625\u5e02",
-		"city_id":"220100",
-		"county":"",
-		"county_id":"-1",
-		"isp":"\u6559\u80b2\u7f51",
-		"isp_id":"100027",
-		"ip":"202.198.16.3"
-	}
+    "errNum": 0,
+    "errMsg": "success",
+    "retData": {
+        "ip": "117.89.35.58", //IP地址
+        "country": "中国", //国家 
+        "province": "江苏", //省份 国外的默认值为none
+        "city": "南京", //城市  国外的默认值为none
+        "district": "鼓楼",// 地区 国外的默认值为none
+        "carrier": "中国电信" //运营商  特殊IP显示为未知
+    }
 }
 ```
 
@@ -113,7 +134,7 @@ function get_client_ip(){
 
 注：参数format可设置返回格式：js/json；参数ip可选查询IP；
 
-- 返回格式如下：
+返回格式如下：
 
 ```
 var remote_ip_info ={
@@ -133,7 +154,7 @@ var remote_ip_info ={
 下面的实例用到了JQuery下的getScript()方法：
 ```
 var uip = '125.40.0.0';
-$.getScript('http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js&ip='+uip, function(_result){
+$.getScript('http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js&ip='+uip, function(){
 	var ipData = "";
 	if (remote_ip_info.ret == '1'){
 		ipData += "IP 详细信息：<br>";
@@ -160,6 +181,13 @@ $.getScript('http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js&ip='+u
 
 http://api.map.baidu.com/location/ip?ak=F454f8a5efe5e577997931cc01de3974&ip=202.198.16.3
 
+|参数|含义	|格式|	说明|
+|--|
+|ip|IP地址|string|可选，IP不出现，或者出现且为空字符串的情况下，会使用当前访问者的IP地址作为定位参数。
+|ak	|开发者密钥|string|必选，登录API控制台，申请AK，作为访问的依据。
+|sn	|用户的权限签名|string	|可选，若用户所用AK的校验方式为SN校验时该参数必须。
+|coor|输出的坐标格式|string|可选，coor不出现时，默认为百度墨卡托坐标；coor=bd09ll时，返回为百度经纬度坐标。
+
 返回值：
 ```
 {
@@ -183,6 +211,8 @@ http://api.map.baidu.com/location/ip?ak=F454f8a5efe5e577997931cc01de3974&ip=202.
 }
 ```
 
-另外，也可以选择离线IP数据库：
-http://code.google.com/p/sinaip/
-有人说：价格便宜量又足～
+##6太平洋IP地址库API接口
+
+接口说明：http://whois.pconline.com.cn/
+
+调用方法非常丰富，提供多种JS嵌入调用。
