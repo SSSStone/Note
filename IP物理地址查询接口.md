@@ -213,8 +213,18 @@ http://api.map.baidu.com/location/ip?ak=F454f8a5efe5e577997931cc01de3974&ip=202.
 }
 ```
 
-##6太平洋IP地址库API接口
+##6.太平洋IP地址库API接口
 
 接口说明：http://whois.pconline.com.cn/
 
 调用方法非常丰富，提供多种JS嵌入调用。
+
+##7.126 IP解析接口
+
+http://ip.ws.126.net/ipquery?ip=[59.37.164.179]
+
+ip：可选参数
+
+```
+var lo="广东省", lc="江门市"; var localAddress={city:"江门市", province:"广东省"}
+```
