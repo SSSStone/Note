@@ -228,3 +228,7 @@ ip：可选参数
 ```
 var lo="广东省", lc="江门市"; var localAddress={city:"江门市", province:"广东省"}
 ```
+
+##8.聚合数据IP解析接口
+
+https://www.juhe.cn/docs/api/id/1
