@@ -44,8 +44,12 @@ The language code of the notification as specified in the options parameter of t
 
 `Notification.tag`
 The ID of the notification (if any) as specified in the options parameter of the constructor.
+标记当前通知的标签。
 
 - The idea of notification tags is that more than one notification can share the same tag, linking them together. One notification can then be programmatically replaced with another to avoid the users' screen being filled up with a huge number of similar notifications.
+
+`Notification.renotify`
+布尔值。新通知出现的时候是否替换之前的。如果设为true，则表示替换，表示当前标记的通知只会出现一个。true参数要想其作用，必须tag需要设置属性值。
 
 `Notification.icon`
 The URL of the image used as an icon of the notification as specified in the options parameter of the constructor.
@@ -55,6 +59,10 @@ A Boolean indicating that on devices with sufficiently large screens, a notifica
 
 `Notification.silent`
 Specifies whether the notification should be silent, i.e. no sounds or vibrations should be issued, regardless of the device settings.
+布尔值。通知出现的时候，是否要有声音。默认false, 表示无声。
+
+`Notification.sound`
+字符串。音频地址。表示通知出现要播放的声音资源。
 
 `Notification.timestamp`
 Specifies the time at which a notification is created or applicable (past, present, or future).
@@ -64,6 +72,10 @@ The title of the notification as specified in the first parameter of the constru
 
 `Notification.vibrate`
 Specifies a vibration pattern for devices with vibration hardware to emit.
+通知显示时候，设备震动硬件需要的振动模式。所谓振动模式，指的是一个描述交替时间的数组，分别表示振动和不振动的毫秒数，一直交替下去。例如[200, 100, 200]表示设备振动200毫秒，然后停止100毫秒，再振动200毫秒。
+
+`Notification.noscreen'
+布尔值。是否不再屏幕上显示通知信息。默认false, 表示要在屏幕上显示通知内容。
 
 ###Event handlers
 
