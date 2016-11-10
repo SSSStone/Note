@@ -1,0 +1,1 @@
+>http://www.ruanyifeng.com/blog/2013/01/javascript_strict_mode.html
