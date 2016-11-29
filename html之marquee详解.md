@@ -4,12 +4,15 @@
 `<marquee></marquee>`
 
 下面这两个事件经常用到：
+
 `onMouseOut="this.start()"` ：用来设置鼠标移出该区域时继续滚动
+
 `onMouseOver="this.stop()"`：用来设置鼠标移入该区域时停止滚动
 
 代码如下:
 ```
 // onMouseOut="this.start()" ：用来设置鼠标移出该区域时继续滚动 // onMouseOver="this.stop()"：用来设置鼠标移入该区域时停止滚动
+
 <marquee onMouseOut="this.start()" onMouseOver="this.stop()"></marquee>
 ```
 
