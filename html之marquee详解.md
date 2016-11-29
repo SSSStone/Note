@@ -1,7 +1,7 @@
 #html之marquee详解 
 
 语法： 
-```<marquee></marquee>```
+`<marquee></marquee>`
 
 下面这两个事件经常用到：
 `onMouseOut="this.start()"` ：用来设置鼠标移出该区域时继续滚动
@@ -55,10 +55,7 @@
 ```
  
 ###behavior
-设定滚动的方式：
-alternate： 表示在两端之间来回滚动。
-scroll： 表示由一端滚动到另一端，会重复。
-slide：  表示由一端滚动到另一端，不会重复。
+设定滚动的方式
 
 代码如下:
 ```
