@@ -112,7 +112,7 @@ $.getScript('http://pv.sohu.com/cityjson?ie=utf-8', function(){console.log(retur
 请求参数(urlParam) :
 
 |参数名|类型|必填|参数位置|描述|默认值|
-|--|--|--|--|--|--|
+| :--: | :--: | :--: | :--: | :--: | :--: |
 |ip|string|是|urlParam|ip地址|127.0.0.1|
 
 返回格式如下：
@@ -184,7 +184,7 @@ $.getScript('http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js&ip='+u
 http://api.map.baidu.com/location/ip?ak=F454f8a5efe5e577997931cc01de3974&ip=202.198.16.3
 
 |参数|含义	|格式|	说明|
-|--|
+| :--: |
 |ip|IP地址|string|可选，IP不出现，或者出现且为空字符串的情况下，会使用当前访问者的IP地址作为定位参数。
 |ak	|开发者密钥|string|必选，登录API控制台，申请AK，作为访问的依据。
 |sn	|用户的权限签名|string	|可选，若用户所用AK的校验方式为SN校验时该参数必须。
