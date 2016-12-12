@@ -106,7 +106,7 @@ $.getScript('http://pv.sohu.com/cityjson?ie=utf-8', function(){console.log(retur
 请求参数(apikey) :
 
 |参数名|类型|必填|参数位置|描述|默认值|
-|--|--|--|--|--|--|
+| -- | -- | -- | -- | -- | -- |
 |apikey|string|是|header|API密钥|您自己的apikey|
 
 请求参数(urlParam) :
