@@ -1,9 +1,36 @@
 #识别字符串中的url并替换为a标签
 
+##识别字符串中的url
+
+```javascript
+function IsURL(str_url) {  
+    var strRegex =    "^((https|http|ftp|rtsp|mms)?://)"  
+				    + "?(([0-9a-z_!~*'().&=+$%-]+: )?[0-9a-z_!~*'().&=+$%-]+@)?" //ftp的user@   
+				    + "(([0-9]{1,3}\.){3}[0-9]{1,3}" // IP形式的URL- 199.194.52.184   
+				    + "|" // 允许IP和DOMAIN（域名）   
+				    + "([0-9a-z_!~*'()-]+\.)*" // 域名- www.   
+				    + "([0-9a-z][0-9a-z-]{0,61})?[0-9a-z]\." // 二级域名   
+				    + "[a-z]{2,6})" // first level domain- .com or .museum   
+				    + "(:[0-9]{1,4})?" // 端口- :80 <br>  
+				    + "((/?)|" // a slash isn't required if there is no file name   
+				    + "(/[0-9a-z_!~*'().;?:@&=+$,%#-]+)+/?)$";  
+    var re = new RegExp(strRegex);  
+    if (re.test(str_url)) {  
+        return (true);  
+    } else {  
+        return (false);  
+    }  
+} 
+```
+
+##识别字符串中的url并替换为a标签
+
+
 >转自：[zhangxinxu](http://www.zhangxinxu.com)
 >原文地址：http://www.zhangxinxu.com/wordpress/?p=749
 
-##检测
+
+###检测
 
 **检测**就是检测文字（字符串）内部是否有符合http地址的内容。
 
@@ -15,7 +42,7 @@ var reg = /(http:\/\/|https:\/\/)((\w|=|\?|\.|\/|&|-)+)/g;
 
 前一部分匹配http或是https开头的URL字符串地址，后面一部分匹配一些字符，英文字符、下划线(_)、点号(.)、问号(?)以及等号(=)，连接短线(-)等。
 
-##替换
+###替换
 说到JavaScript中的替换功能，首先想到的自然是replace属性了，replace属性强大之处在于其支持正则表达式，可以对符合正则的字符串进行替换。
 例如，我们要替换掉字符串两端的空格就可以使用类似下面的语句：
 
