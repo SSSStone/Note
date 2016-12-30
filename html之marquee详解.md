@@ -1,4 +1,20 @@
-#html之marquee详解 
+# html之marquee详解 
+
+- [简介](#%E7%AE%80%E4%BB%8B)
+- [属性](#%E5%B1%9E%E6%80%A7)
+  - [align](#align)
+  - [behavior](#behavior)
+  - [bgcolor](#bgcolor)
+  - [direction](#direction)
+  - [height](#height)
+  - [width](#width)
+  - [hspace](#hspace)
+  - [vspace](#vspace)
+  - [loop](#loop)
+  - [scrollamount](#scrollamount)
+  - [scrolldelay](#scrolldelay)
+ 
+ # 简介
 
 语法： 
 `<marquee></marquee>`
@@ -23,6 +39,7 @@
 这是一个完整的例子
 </marquee>
 ```
+## 属性
 
 ###align
 设定<marquee>标签内容的对齐方式
