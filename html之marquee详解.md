@@ -14,7 +14,7 @@
   - [scrollamount](#scrollamount)
   - [scrolldelay](#scrolldelay)
  
- # 简介
+# 简介
 
 语法： 
 `<marquee></marquee>`
