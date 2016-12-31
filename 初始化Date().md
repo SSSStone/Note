@@ -1,4 +1,6 @@
-##参数形式有以下5种：
+#初始化Date()
+
+##参数形式：
 
 ```
 new Date("month dd, yyyy hh:mm:ss"); 
