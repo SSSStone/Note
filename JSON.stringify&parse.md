@@ -6,6 +6,8 @@
   - [array](#array)
   - [function](#function)
 - [第三个参数](#第三个参数)
+  - [number](#number)
+  - [string](#string)
 
 ## 语法
 
@@ -66,6 +68,7 @@ var obj = {
 
 调试中会发现`console.log(JSON.stringify(obj))` 是完全没有格式，第三个参数就是这里的格式化补齐的符号。
 
+### number
 如果是数字则表示缩进量：
 
 ``` javascript
@@ -77,6 +80,7 @@ JSON.stringify(obj,null,4);
 // }"
 ```
 
+### string
 如果是字符则表示填充字符
 
 ``` javascript
