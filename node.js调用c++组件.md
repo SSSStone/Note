@@ -1,16 +1,16 @@
 #node.js调用c++组件
 
-##环境安装
+## 安装环境
 
 >windows
 
-###安装node.js
+### 安装node.js
 
 >http://nodejs.cn/
 
 下载安装即可
 
-###安装node-gyp
+### 安装node-gyp
 
 >https://github.com/nodejs/node-gyp
 
@@ -43,7 +43,7 @@ You will also need to install:
 
 	-  Launch cmd, `npm config set msvs_version 2015`
 
-##模块绑定（.gyp）
+## 模块绑定（.gyp）
 
 ```
 {
@@ -56,7 +56,7 @@ You will also need to install:
 }
 ```
 
-##.CC文件
+## .CC文件
 
 ```
 // add.cc
@@ -108,7 +108,7 @@ NODE_MODULE(test, myInit)
 }
 ```
 
-##.js文件
+## .js文件
 
 ```
 var test = require('./build/Release/test');
