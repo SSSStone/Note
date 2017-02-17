@@ -47,7 +47,7 @@ myURL.protocol; // = 'http'
 myURL.source;   // = 'http://abc.com:8080/dir/index.html?id=255&m=hello#top'
 ```
 
-##二、`parseUri`
+## 二、`parseUri`
 
 >http://blog.stevenlevithan.com/archives/parseuri
 
