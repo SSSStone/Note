@@ -1,8 +1,8 @@
 #Ajax笔记
-[TOC]
-##一、Ajax请求流程
 
-###1/如何创建XHR对象
+## 一、Ajax请求流程
+
+### 1/如何创建XHR对象
 
 按标准，` new XMLHttpRequest() ` 即可得到。
 考虑低版本IE浏览器，可以` new window.ActiveXObject(Mircosoft.XMLHttp) `。新版本JQuery已经不支持IE6。
@@ -34,7 +34,7 @@ function createXHR(){
 }
 ```
 
-###2/如何利用XHR发送请求
+### 2/如何利用XHR发送请求
 
 分析HTTP协议，请求需要明确这样几个因素。
 
@@ -42,11 +42,11 @@ function createXHR(){
 2. 请求哪个资源？（URL）
 3. 同步方式？（同步/异步）
 
-###3/如何获取请求返回的数据
+### 3/如何获取请求返回的数据
 
 XHR对象本身又一个属性` responseText `代表返回值
 
-###4/监听XHR状态
+### 4/监听XHR状态
 
 XHR对象在请求与响应的过程中，状态会不断变化（0-4）。绑定一个函数，监听XHR状态变化。
 
@@ -102,7 +102,7 @@ function testAjax(){
 
 ###3/应用
 
-![Alt text](./1458636819646.png 'name')
+![Alt text](http://images.cuiyan-me.cn/images/blog/1458636819646.png)
 
 ``` javascript
 function testAjax(){
