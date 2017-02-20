@@ -1,6 +1,6 @@
 # JS闭包
 
-[JS中的作用域](JS中的作用域(scope))
+- [JS中的作用域](JS中的作用域(scope))
 
 ## JS中的作用域(scope)
 
