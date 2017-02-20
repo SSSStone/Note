@@ -1,7 +1,6 @@
-#JS闭包
-[toc]
+# JS闭包
 
-##JS中的作用域(scope)。
+## JS中的作用域(scope)。
 
 每个函数在创建完成时，他有3个重要的内置属性（property）也同时被创建。
 
@@ -15,7 +14,7 @@
 
 JS中，大家经常讲的Scope其实是这样：SCOPE=AO+scope.
 
-##常见的一个闭包问题(循环绑定事件)
+## 常见的一个闭包问题(循环绑定事件)
 
 如果我们这样写这个程序：
 
@@ -39,9 +38,9 @@ for(var i =0; i<link.length; i++){             //window scope
 
 >函数的本意是给每个事件处理器不同的` i `。但它未能达到目的，因为事件处理器函数绑定了` i本身`，而不是函数在构造时的`变量 i 的值`。
 
-###解决该问题
+### 解决该问题
 
-###方法一
+### 方法一
 
 利用大家所说的闭包写这个程序：
 
@@ -86,10 +85,10 @@ outer function的SCOPE
 
 ###方法二
 
-利用 dom onclick事件的bubble特性。
+利用 dom `onclick`事件的`bubble`特性。
 
-1. 在link dom节点的父节点上定义onclick事件监听。参数为e（其他的名字也可以，但要有参数）。这样我们通过e.target就可以知道是那个子节点被click了，也可以做相应的处理。
-2. 循环添加每个节点的attribute，然后在外层elem绑一个事件。
+1. 在`dom`节点的父节点上定义`onclick`事件监听。参数为`e`（其他的名字也可以，但要有参数）。这样我们通过`e.target`就可以知道是那个子节点被`click`了，也可以做相应的处理。
+2. 循环添加每个节点的`attribute`，把参数保存在`DOM`中，然后在外层`element`绑一个事件。
 
 ##闭包的特性
 
@@ -122,5 +121,38 @@ var aaa = (function(){
 aaa.b();     //2
 aaa.c()      //3
 ```
+## 常见闭包问题二(循环输出)
 
-挖个坑（补充 setTimeout+闭包）
+``` javascript
+for(var i =0; i<10; i++){
+	setTimeout(function(){console.log(i)}, 0);
+}
+// 输出10个'10'
+```
+
+### 解决方法(利用闭包)
+
+``` javascript
+for(var i =0; i<10; i++){
+	setTimeout((function(i){return function(){console.log(i)}}(i)), 0);
+}
+// 依次输出'0-9'
+```
+
+``` javascript
+for(var i =0; i<10; i++){
+	(function(i){return setTimeout(function(){console.log(i)}, 0)}(i));
+}
+// 依次输出'0-9'
+```
+
+两段代码均可达到目的。
+
+ps:如果要求每隔1S输出一个数字
+
+``` javascript
+for(var i =0; i<10; i++){
+	(function(i){return setTimeout(function(){console.log(i)}, i*1000)}(i));
+}
+// 依次输出'0-9'
+```
