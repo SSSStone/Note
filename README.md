@@ -5,13 +5,19 @@
 目录
 
 - [JavaScript](#)
+    - [Ajax笔记](Ajax笔记.md)
     - []()
-- [HTML]()
     - []()
-- [CSS]()
     - []()
-- [工具]()
     - []()
-- [杂记]()
+- [HTML](#)
+    - [html之marquee详解](html之marquee详解.md)
+- [CSS](#)
     - []()
+- [JQuery](#)
+    - []()
+- [工具](#)
+    - []()
+- [杂记](#)
+    - [centos找回MySQL密码](centos找回MySQL密码.md)
     
