@@ -39,6 +39,7 @@
     - [设置和移除disabled属性](设置和移除disabled属性.md)
     - [识别字符串中的url并替换为a标签](识别字符串中的url并替换为a标签.md)
     - [逼近比较](逼近比较.md)
+    - [js排序算法](jsSort.js)
 - [HTML](#)
     - [html之marquee详解](html之marquee详解.md)
     - [Element与Node的区别，children与childNodes的区别](Element与Node的区别，children与childNodes的区别.md)
