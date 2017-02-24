@@ -13,7 +13,7 @@
 
 ### 方法一
 
-``` javascript
+```javascript
 function toThousands(num) {
     var result = [ ], counter = 0;
     num = (num || 0).toString().split('');
@@ -33,7 +33,7 @@ function toThousands(num) {
 
 方法一的字符串版
 
-``` javascript
+```javascript
 function toThousands(num) {
     var result = '', counter = 0;
     num = (num || 0).toString();
@@ -53,7 +53,7 @@ function toThousands(num) {
 
 循环匹配末尾的三个数字
 
-``` javascript
+```javascript
 function toThousands(num) {
     var num = (num || 0).toString(), re = /\d{3}$/, result = '';
     while ( re.test(num) ) {
@@ -85,7 +85,7 @@ function toThousands(num) {
 
 方法三的字符串版
 
-``` javascript
+```javascript
 function toThousands(num) {
     var num = (num || 0).toString(), result = '';
     while (num.length > 3) {
@@ -104,7 +104,7 @@ function toThousands(num) {
 
 分组合并法
 
-``` javascript
+```javascript
 function toThousands(num) {
     var num = (num || 0).toString(), temp = num.length % 3;
     switch (temp) {
@@ -126,7 +126,7 @@ function toThousands(num) {
 
 正则匹配法
 
-``` javascript
+```javascript
 function toThousands(num) {
     return (num || 0).toString().replace(/(\d)(?=(?:\d{3})+$)/g, '$1,');
 }
