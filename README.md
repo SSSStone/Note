@@ -5,6 +5,7 @@
 目录
 
 - [JavaScript原理](#)
+    - [JavaScript事件处理机制](JavaScript事件处理机制.md)
     - [Ajax笔记](Ajax笔记.md)
     - [JSON.stringify&parse](JSON.stringify&parse.md)
     - [FormData对象的使用](FormData对象的使用.md)
@@ -14,7 +15,6 @@
     - [js执行顺序](js执行顺序.md)
     - [Js异步编程–回调函数](Js异步编程–回调函数.md)
     - [js变量、作用域、内存](js变量、作用域、内存.md)
-    - [JavaScript事件处理机制](JavaScript事件处理机制.md)
     - [跨域访问总结](跨域访问总结.md)
     - [JavaScript的组成—ECMAScript、BOM和DOM](JavaScript的组成—ECMAScript、BOM和DOM.md)
     - [Javascript引擎分配内存的场景](Javascript引擎分配内存的场景.md)
