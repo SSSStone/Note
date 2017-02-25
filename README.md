@@ -62,6 +62,7 @@
     - [IP物理地址查询接口](IP物理地址查询接口.md)
     - [iscroll.js](iscroll.js)
 - [杂记](#)
+    - [gitignore文件配置](gitignore文件配置.md)
     - [centos找回MySQL密码](centos找回MySQL密码.md)
     - [GET&POST](GET&POST.md)
     - [http状态码](http状态码.md)
