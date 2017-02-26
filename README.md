@@ -23,6 +23,7 @@
     - [undefined、not defined、null](undefined、not%20defined、null.md)
     - [with()语句](with()语句.md)
     - [notification](notification.md)
+    - [escape，encodeURI，encodeURIComponent解析](escape，encodeURI，encodeURIComponent解析.md)
 - [JavaScript应用](#)
     - [JS实现数字千分符格式化](JS实现数字千分符格式化.md)
     - [js自定义sleep()方法](js自定义sleep()方法.md)
