@@ -25,6 +25,7 @@
     - [notification](notification.md)
     - [escape，encodeURI，encodeURIComponent解析](escape，encodeURI，encodeURIComponent解析.md)
 - [JavaScript应用](#)
+    - [跨浏览器事件处理](跨浏览器事件处理.md)
     - [JS实现数字千分符格式化](JS实现数字千分符格式化.md)
     - [js自定义sleep()方法](js自定义sleep()方法.md)
     - [js获取剪切板信息](js获取剪切板信息.md)
