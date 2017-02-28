@@ -1,27 +1,28 @@
 # Note
 
-（仅作为学习笔记使用）
+临渊羡鱼不如退而结网！
 
 目录
+
 - [JavaScript原理](#)
     - [JavaScript事件处理机制](JavaScript事件处理机制.md)
     - [Ajax笔记](Ajax笔记.md)
-    - [JSON.stringify&parse](JSON.stringify&parse.md)
-    - [FormData对象的使用](FormData对象的使用.md)
+    - [跨域访问总结](跨域访问总结.md)
     - [js匿名函数](js匿名函数.md)
     - [JS原型链](JS原型链.md)
     - [JS闭包](JS闭包.md)
     - [js执行顺序](js执行顺序.md)
     - [Js异步编程–回调函数](Js异步编程–回调函数.md)
     - [js变量、作用域、内存](js变量、作用域、内存.md)
-    - [跨域访问总结](跨域访问总结.md)
     - [JavaScript的组成—ECMAScript、BOM和DOM](JavaScript的组成—ECMAScript、BOM和DOM.md)
     - [Javascript引擎分配内存的场景](Javascript引擎分配内存的场景.md)
-    - [javascript严格模式详解](javascript严格模式详解.md)
     - [if(condition)与if(condition==true)](if(condition)与if(condition==true).md)
     - [undefined、not defined、null](undefined、not%20defined、null.md)
     - [with()语句](with()语句.md)
     - [notification](notification.md)
+    - [JSON.stringify&parse](JSON.stringify&parse.md)
+    - [FormData对象的使用](FormData对象的使用.md)
+    - [javascript严格模式详解](javascript严格模式详解.md)
     - [escape，encodeURI，encodeURIComponent解析](escape，encodeURI，encodeURIComponent解析.md)
 - [JavaScript应用](#)
     - [跨浏览器事件处理](跨浏览器事件处理.md)
@@ -77,3 +78,4 @@
     - [项目流程](项目流程.png)
     - [在myeclipse中快速打开Jsp文件](在myeclipse中快速打开Jsp文件.md)
     - [如何写简历](如何写简历.md)
+    
