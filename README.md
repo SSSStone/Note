@@ -74,6 +74,7 @@
     - [WebStorm+Git](WebStorm+Git.md)
     - [MyEclipse编译器中修改Web项目的发布名称](MyEclipse编译器中修改Web项目的发布名称.md)
     - [地图坐标转换](地图坐标转换.md)
+    - [CommonJS、RequireJS(AMD)、SeaJS(CMD)解析](CommonJS、RequireJS(AMD)、SeaJS(CMD)解析.md)
     - [lorem](lorem.md)
     - [项目流程](项目流程.png)
     - [在myeclipse中快速打开Jsp文件](在myeclipse中快速打开Jsp文件.md)
