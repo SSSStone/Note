@@ -100,7 +100,7 @@ var quickSort = function(arr) {
             right.push(arr[i]);
         }
     }
-    return quickSort(left).concat(pivot, quickSort(right));
+    return arguments.callee(left).concat(pivot, arguments.callee(right));
 };
 
 function quickSort2(arr, begin, end) {
@@ -117,8 +117,8 @@ function quickSort2(arr, begin, end) {
             arr[j] = arr[i];
         }
         arr[i] = temp;
-        quickSort2(arr, begin, i-1);
-        quickSort2(arr, i+1, end);
+        arguments.callee(arr, begin, i-1);
+        arguments.callee(arr, i+1, end);
     }
     return arr;
 }
@@ -141,8 +141,8 @@ function quickSort3(arr, begin, end) {
     temp = arr[i];
     arr[i] = arr[end];
     arr[end] = temp;
-    quickSort3(arr, begin, i-1);
-    quickSort3(arr, i+1, end);
+    arguments.callee(arr, begin, i-1);
+    arguments.callee(arr, i+1, end);
     return arr;
 }
 
