@@ -75,6 +75,7 @@
     - [gitignore文件配置](gitignore文件配置.md)
     - [centos找回MySQL密码](centos找回MySQL密码.md)
     - [WebStorm+Git](WebStorm+Git.md)
+    - [ES6新特性](http://www.jianshu.com/p/ebfeb687eb70)
     - [MyEclipse编译器中修改Web项目的发布名称](MyEclipse编译器中修改Web项目的发布名称.md)
     - [地图坐标转换](地图坐标转换.md)
     - [lorem](lorem.md)
