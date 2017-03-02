@@ -61,8 +61,8 @@ function bubbleSort2(arr) {
             }
         }
         i--;
+        // 如果一次冒泡过程中 没有位置交换 则排序结束
         if (0 === flag) {
-            console.log(123);
             break;
         }
     }
@@ -72,7 +72,8 @@ function bubbleSort2(arr) {
 // 选择排序
 function selectionSort(arr) {
     var i, j, index = 0, temp;
-    for (i=0; i<arr.length-1; i++) {
+    for (i=0; i<arr.length; i++) {
+        index = i;
         for (j=i+1; j<arr.length; j++) {
             if (arr[index] > arr[j]) {
                 index = j;
@@ -126,29 +127,25 @@ function quickSort3(arr, begin, end) {
     if (begin >= end) {
         return arr;
     }
-    var i = begin, j = end-1, temp;
+    var i = begin, j = end, temp;
     while (i<j) {
         if (arr[i] <= arr[end]) {
             i++
         } else {
+            j--;
             temp = arr[i];
             arr[i] = arr[j];
             arr[j] = temp;
-            j--;
         }
     }
-    if (arr[i] > arr[end]) {
-        temp = arr[i];
-        arr[i] = arr[end];
-        arr[end] = temp;
-    }
+    temp = arr[i];
+    arr[i] = arr[end];
+    arr[end] = temp;
     quickSort3(arr, begin, i-1);
     quickSort3(arr, i+1, end);
     return arr;
 }
 
-
-// var arr = [ 2, 3, 4, 5, 5, 6, 7, 8, 9, 74 ];
 var arr = [8,4,6,2,7,9,3,5,74,5];
 
 console.log(quickSort3(arr, 0, arr.length-1));
