@@ -14,6 +14,7 @@
     - [js执行顺序](js执行顺序.md)
     - [Js异步编程–回调函数](Js异步编程–回调函数.md)
     - [js变量、作用域、内存](js变量、作用域、内存.md)
+    - [JS中变量和函数声明hoist](JS中变量和函数声明hoist.md)
     - [JavaScript的组成—ECMAScript、BOM和DOM](JavaScript的组成—ECMAScript、BOM和DOM.md)
     - [Javascript引擎分配内存的场景](Javascript引擎分配内存的场景.md)
     - [if(condition)与if(condition==true)](if(condition)与if(condition==true).md)
