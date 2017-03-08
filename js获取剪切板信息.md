@@ -10,9 +10,9 @@
 
 绑定的元素不一定是`input`，普通的`div`也是可以绑定的，如果是给`document`绑定了，就相当于全局了，任何时候的粘贴操作都会触发。
 
-##事件对象
+## 事件对象
 
-###获取事件对象
+### 获取事件对象
 
 ```
 pasteEle.addEventListener("paste", function (e){
@@ -24,14 +24,14 @@ pasteEle.addEventListener("paste", function (e){
 
 粘贴事件提供了一个clipboardData的属性，如果该属性有items属性，那么就可以查看items中是否有图片类型的数据了。Chrome有该属性，Safari没有。
 
-###`clipboardData`介绍
+### `clipboardData`介绍
 
 介绍一下clipboardData对象，它实际上是一个DataTransfer类型的对象，DataTransfer 是拖动产生的一个对象，但实际上粘贴事件也是它。
 
 clipboardData的属性介绍
 
 |属性|类型|说明|
-|:---|:--|:--|
+|:---|:---|:---|
 |dropEffect|String|	默认是 none|
 |effectAllowed|String|	默认是 uninitialized
 |files	|FileList	|粘贴操作为空List
@@ -45,14 +45,14 @@ clipboardData的属性介绍
 items的属性介绍
 
 |属性|说明|
-|:---|:--|
+|:---|:---|
 |kind	|一般为string或者file
 |type	|具体的数据类型，例如具体是哪种类型字符串或者哪种类型的文件，即MIME-Type
 
 chrome环境下两种属性测试结果
 
 |类型|kind|type|
-|:---|:--|:--|
+|:---|:---|:---|
 |复制的图片|string|text/html|
 |复制的图片|file|image/XX|
 |截图信息|file|image/XX|
@@ -62,7 +62,7 @@ chrome环境下两种属性测试结果
 items的方法介绍
 
 |方法	|参数	|说明|
-|:---|:--|:--|
+|:---|:---|:---|
 |getAsFile	|空	|如果kind是file，可以用该方法获取到文件
 |getAsString	|回调函数	|如果`kind`是`string`，可以用该方法获取到字符串，字符串需要用回调函数得到，回调函数的第一个参数就是剪切板中的字符串
 
@@ -71,7 +71,7 @@ items的方法介绍
 一般`types`中常见的值有`text/plain`、`text/html`、`Files`。
 
 |值	|说明|
-|:---|:--|
+|:---|:---|
 |text/plain	|普通字符串
 |text/html	|带有样式的html
 |Files	|文件(例如剪切板中的数据)
@@ -133,5 +133,3 @@ function imgReader( item ){
     reader.readAsDataURL( file );
 };
 ```
-
-##
