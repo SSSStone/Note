@@ -83,6 +83,7 @@
     - [·2017腾讯实习面试](2017腾讯实习面试.md)
     - [CommonJS、RequireJS(AMD)、SeaJS(CMD)解析](CommonJS、RequireJS(AMD)、SeaJS(CMD)解析.md)
     - [XSS攻击](XSS攻击.md)
+    - [前端开发工程化](前端开发工程化.md)
     - [.gitignore文件配置](gitignore文件配置.md)
     - [centos找回MySQL密码](centos找回MySQL密码.md)
     - [WebStorm+Git](WebStorm+Git.md)
