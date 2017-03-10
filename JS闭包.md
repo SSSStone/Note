@@ -141,14 +141,14 @@ for(var i =0; i<10; i++){
 
 ``` javascript
 for(var i =0; i<10; i++){
-	setTimeout((function(i){return function(){console.log(i)}}(i)), 0);
+	setTimeout((function(i){return function(){console.log(i)}})(i), 0);
 }
 // 依次输出'0-9'
 ```
 
 ``` javascript
 for(var i =0; i<10; i++){
-	(function(i){return setTimeout(function(){console.log(i)}, 0)}(i));
+	(function(i){return setTimeout(function(){console.log(i)}, 0)})(i);
 }
 // 依次输出'0-9'
 ```
@@ -161,5 +161,25 @@ ps:如果要求每隔1S输出一个数字
 for(var i =0; i<10; i++){
 	(function(i){return setTimeout(function(){console.log(i)}, i*1000)}(i));
 }
-// 依次输出'0-9'
+// 每隔一秒输出，'0-9'
+```
+或者
+``` javascript
+for(var i =0; i<10; i++){
+	setTimeout((function(i){return function(){console.log(i)}})(i), i*1000);
+}
+// 每隔一秒输出'0-9'
+```
+错误的写法
+``` javascript
+for(var i =0; i<10; i++){
+	setTimeout((function(i){console.log(i)})(i), i*1000);
+}
+// 立即输出'0-9'
+
+// 相当于
+for(var i =0; i<10; i++){
+    console.log(i);
+    setTimeout(undefined, i*1000);
+}
 ```
