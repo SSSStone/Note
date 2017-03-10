@@ -1,4 +1,3 @@
-
 # JSON.stringify
 
 - [语法](#语法)
