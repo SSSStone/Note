@@ -69,6 +69,7 @@
 - [JQuery](#)
     - [ready在jQuery里的几种写法](ready在jQuery里的几种写法.md)
 - [Node](#)
+    - [阻塞IO、非阻塞IO、异步IO解析](阻塞IO、非阻塞IO、异步IO解析.md)
     - [node.js调用c++组件](node.js调用c++组件.md)
     - [setTimeout和setImmediate以及process.nextTick的区别](setTimeout和setImmediate以及process.nextTick的区别.md)
 - [WebSocket](#)
