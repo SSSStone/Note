@@ -81,6 +81,7 @@
 - [Linux](#)
     - [ubuntu设置允许root登录](ubuntu设置允许root登录.md)
     - [修改主机名](修改主机名.md)
+    - [nvm搭建node开发环境](nvm搭建node开发环境.md)
 - [工具](#)
     - [IP物理地址查询接口](IP物理地址查询接口.md)
     - [iscroll.js](iscroll.js)
