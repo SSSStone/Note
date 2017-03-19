@@ -102,3 +102,4 @@
     - [项目流程](项目流程.png)
     - [在MyEclipse中快速打开Jsp文件](在myeclipse中快速打开Jsp文件.md)
     - [如何写简历](如何写简历.md)
+    - [ubuntu设置允许root登录](ubuntu设置允许root登录.md)
