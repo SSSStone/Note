@@ -8,6 +8,11 @@ idle观察者 > IO观察者 > check观察者
 - `setTimeout()`属于IO观察者
 - `setImmediate()`属于check观察者
 
+注：
+
+- 采用定时器需要动用红黑树，创建定时器对象和迭代等操作，`setTimeout(fn, 0)`的方式较为浪费性能。
+- `process.nextTick()`的回调函数保存在一个数组中；而`setImmediate()`的回调函数保存在链表中。
+
 ## 猜想
 
 每次`event loop`执行完成一个观察者的对象后，会重新进行`event loop`，而不是把所有观察者都执行完成后再循环。
