@@ -3,6 +3,11 @@
 - [Promise应用](#promise应用)
     - [Promise基础应用](#promise基础应用)
     - [链式调用](#链式调用)
+    - [执行失败回调处理](#执行失败回调处理)
+    - [catch的用法](#catch的用法)
+    - [all的用法](#all的用法)
+    - [race的用法](#race的用法)
+    
 - [Promise规范](#promise规范)
     - [Promise的状态](#promise的状态)
     - [Then方法](#then方法)
