@@ -68,6 +68,7 @@
     - [http状态码](http状态码.md)
 - [JQuery](#)
     - [ready在jQuery里的几种写法](ready在jQuery里的几种写法.md)
+    - [ready与load事件](ready与load事件.md)
 - [Node](#)
     - [阻塞IO、非阻塞IO、异步IO解析](阻塞IO、非阻塞IO、异步IO解析.md)
     - [Promise详解](Promise详解.md)
