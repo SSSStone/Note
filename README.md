@@ -50,6 +50,7 @@
     - [取子串方法slice,substr,substring对比](取子串方法slice,substr,substring对比.md)
     - [clone JS数据类型的实现](clone.md)
     - [追加onload](追加onload.md)
+    - [Cookie和Session](Cookie和Session.md)
 - [HTML](#)
     - [html之marquee详解](html之marquee详解.md)
     - [Element与Node的区别，children与childNodes的区别](Element与Node的区别，children与childNodes的区别.md)
