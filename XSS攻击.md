@@ -10,6 +10,8 @@
 
 ## 基础知识
 
+XSS -- Cross-site scripting
+
 http://netsecurity.51cto.com/art/201408/448305.htm
 
 ## XSS攻击分类
