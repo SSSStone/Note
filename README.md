@@ -117,4 +117,4 @@
     - [如何写简历](如何写简历.md)
     - [GitHubPages绑定二级域名](https://segmentfault.com/a/1190000005775893)
     
-<span color='red'>内容</span>
+<a href="www.baidu.com" color='red'>内容</a>
