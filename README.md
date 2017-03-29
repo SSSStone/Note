@@ -48,6 +48,7 @@
     - [逼近比较](逼近比较.md)
     - [JS排序算法](jsSort.js)
     - [取子串方法slice,substr,substring对比](取子串方法slice,substr,substring对比.md)
+    - [数组扁平化](数组扁平化.md)
     - [数组去重](数组去重.md)
     - [clone JS数据类型的实现](clone.md)
     - [追加onload](追加onload.md)
