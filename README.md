@@ -50,6 +50,7 @@
     - [取子串方法slice,substr,substring对比](取子串方法slice,substr,substring对比.md)
     - [数组扁平化](数组扁平化.md)
     - [数组去重](数组去重.md)
+    - [Object比较](http://stackoverflow.com/questions/1068834/object-comparison-in-javascript)
     - [clone JS数据类型的实现](clone.md)
     - [追加onload](追加onload.md)
     - [Cookie和Session](Cookie和Session.md)
@@ -115,3 +116,5 @@
     - [在MyEclipse中快速打开Jsp文件](在myeclipse中快速打开Jsp文件.md)
     - [如何写简历](如何写简历.md)
     - [GitHubPages绑定二级域名](https://segmentfault.com/a/1190000005775893)
+    
+<span color='red'>内容</span>
