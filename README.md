@@ -50,7 +50,6 @@
     - [取子串方法slice,substr,substring对比](取子串方法slice,substr,substring对比.md)
     - [数组扁平化](数组扁平化.md)
     - [数组去重](数组去重.md)
-    - [Array.includes()&indexOf()](Array.includes()&indexOf().md)
     - [clone JS数据类型的实现](clone.md)
     - [追加onload](追加onload.md)
     - [Cookie和Session](Cookie和Session.md)
