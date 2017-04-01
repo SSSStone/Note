@@ -106,6 +106,7 @@
     - [MySql索引](MySql索引.md)
     - [反向代理](http://bbs.51cto.com/thread-967852-1-1.html)
 - [杂记](#)
+    - [廖雪峰老师的Git教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
     - [.gitignore文件配置](gitignore文件配置.md)
     - [centos找回MySQL密码](centos找回MySQL密码.md)
     - [WebStorm+Git](WebStorm+Git.md)
@@ -115,6 +116,5 @@
     - [项目流程](项目流程.png)
     - [在MyEclipse中快速打开Jsp文件](在myeclipse中快速打开Jsp文件.md)
     - [如何写简历](如何写简历.md)
+    - [前端面试题](前端面试题.md)
     - [GitHubPages绑定二级域名](https://segmentfault.com/a/1190000005775893)
-    
-<a href="www.baidu.com" color='red'>内容</a>
