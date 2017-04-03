@@ -19,7 +19,6 @@
     - [JSONP安全性总结](JSONP安全性总结.md)
     - [JavaScript的组成—ECMAScript、BOM和DOM](JavaScript的组成—ECMAScript、BOM和DOM.md)
     - [Promise详解](Promise详解.md)
-    - [Javascript引擎分配内存的场景](Javascript引擎分配内存的场景.md)
     - [if(condition)与if(condition==true)](if(condition)与if(condition==true).md)
     - [undefined、not defined、null](undefined、not%20defined、null.md)
     - [with()语句](with()语句.md)
